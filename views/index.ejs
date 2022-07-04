@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+        <title>Magatzem imatges</title>
+
+</head>
+
+<body class="body-index">
+    <header>
+        <%- include('./partials/nav'); %>
+    </header>
+    <div>
+        <h1> Bienvenidos ! Image Gallery</h1>
+        <p> Actualmente hay <%= numPics %> fotos en el almacén de imágenes</p>
+    </div>
+
+    <div class="containerPics d-flex flex-column flex-sm-row justify-content-evenly">
+        <!-- For each para generar un img por cada iteracion, mirar cats, -->
+
+        <% pictures.forEach(a=> { %>
+            <div class="">
+                <div class="card">
+                    <img src="<%= a.url %>" class="" alt="" style="height: 350px">
+                    <p class="text-center">
+                        <%= a.title.toUpperCase() %>
+                    </p>
+                    <p class="text-center">
+                        <%= a.date %>
+                    </p>
+                    <p class="text-center">RGB(<%= a.color %>)</p>
+                    <div style="background-color:rgb(<%= a.color %>); height: 40px; width: 50px"
+                        class="mx-auto mb-2 rounded-circle">
+
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+
+
+
+    </div>
+</body>
+
+</html>
