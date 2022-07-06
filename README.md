@@ -62,9 +62,10 @@ Te proponemos seguir este orden:
 ### Requisito 4 - B
 Modifica el formulario de **añadir imagen** para que ahora puedas seleccionar **una** etiqueta para cada foto.
 
-1. La vista que renderiza el fomrulario de añadir imagen debe otorgar ahora la posibilidad de asociar una etiqueta 
+1. La vista que renderiza el formulario de añadir imagen debe otorgar ahora la posibilidad de asociar una etiqueta 
 2. Un control adecuado para esto sería un **select** ; donde vas a tener que generar tantos **option** como etiquetas hay en tu base de datos
 3. Necesitaras modificar el modelo de la Imagen para tener en cuenta la etiqueta asociada.
+4. Sabrás que lo has hecho bien, si ahora en el images.json tenemos la imagen insertada con un nuevo campo (de nombre tag?)
 
 ### Requisito 4 - C
 Modifica la vista que muestra todas las imágenes para que ahora también incluya la etiqueta asociada a la imagen; con el color de fondo establecido para dicha etiqueta.
