@@ -28,7 +28,7 @@ const getOrderedPictures = () => {
 }
 
 // añadir foto nueva
-const addNewPicture = (title, url, date, color) => {
+const addNewPicture = (title, url, date, color, tag) => {
 
     // Recuperar todas las fotos
     const pictures = getPictures();
@@ -38,7 +38,8 @@ const addNewPicture = (title, url, date, color) => {
         title,
         url,
         date,
-        color
+        color,
+        tag
     });
 
     // Escribir el array entero de nuevo en el JSON

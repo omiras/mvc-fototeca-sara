@@ -6,6 +6,7 @@ const { getColorFromURL } = require('color-thief-node');
 
 // importar el modelo
 const modelImages = require('../models/image');
+const modelTag = require('../models/tag');
 
 
 
@@ -24,36 +25,43 @@ const getAllImages = (req, res) => {
 };
 
 const getForm = (req, res) => {
+
+    // obtenemos todos los tags
+    const tags = modelTag.getAllTags();
+
     res.render("form", {
         urlRepetida: undefined,
-
+        tags
     });
 };
 
 const postForm = async (req, res) => {
     //añadir una constante que se quede con las propiedades del formulario , const{title,url,date} = req.body ,propiedad body hace ref a la inf, payload que viaja en el cuerpo de las peticiones post
-    const { title, url, date } = req.body;
+    const { title, url, date, tag } = req.body;
 
     const dominantColor = await getColorFromURL(url);
-    console.log(dominantColor);
+
 
     // 1.Pedir al modelo si tiene una foto con esta url en la BBDD 
-
     const urlExist = modelImages.urlExists(url);
-    console.log(urlExist);
 
     //2. si es false podemos hacer un push a la variable pictures y res.redirect("/"),
     //3. si es true tenemos que informar al usuario que no vale 
 
     if (urlExist) {
+
+        // obtenemos todos los tags del modelo
+        const tags = modelTag.getAllTags();
+
         //devolver mensaje al usuario
         res.render("form", {
-            urlRepetida: url
+            urlRepetida: url,
+            tags
         });
 
     }
     else {
-        modelImages.addNewPicture(title, url, date, dominantColor);
+        modelImages.addNewPicture(title, url, date, dominantColor, tag);
 
     }
 

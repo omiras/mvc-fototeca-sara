@@ -27,7 +27,15 @@ app.use('/tag', tagRoutes);
 // 3. Cuando insertemos una nueva etiqueta, podemos renderizar de nuevo al usuario a la vista del formulario de añadir etiqueta (y quizás un mensaje diciendo que la etiqueta se ha insertado correctamente en la BBDD?) 
 // 4. Si lo habéis hecho bien, el fichero tags.json debería empezar a llenarse de objetos
 
-// Corregir 16.30.
+// Requisito 4 - B
+
+// 1. El controlador image.js, cuando renderiza el formulario, debe ahora también pasar a la vista todos los tags disponibles
+// 2. En la vista form.ejs; tenemos que hacer un forEach para crear tantas <option> como tags nos pasen a la vista. Recordad todos los valores que debe cotener el tag option para que funcione correctamente. También recordar el campo name para el <select>
+// 3. Hay que recuperar en el controlador postForm el tag elegido por el usuario. 
+// 4. Modificar model/image.js, para que la función addNewImage acepte un nuevo parámetro (tag). El objeto ahora debe contener también este tag
+// 5. El controlador ahora si podría crear una nueva imagen asociandole el tag del usuario
+
+// Corregir: 15:58.
 
 
 app.get('/', (req, res) => {
