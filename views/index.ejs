@@ -24,11 +24,18 @@
                 <div class="card">
                     <img src="<%= a.url %>" class="" alt="" style="height: 350px">
                     <p class="text-center">
-                        <%= a.title.toUpperCase() %>
+                        <%= a.title.toUpperCase() %> <span style="background-color: <%= a.tag.color %>" class="badge">
+                                <%= a.tag.name %>
+                            </span>
                     </p>
                     <p class="text-center">
                         <%= a.date %>
                     </p>
+
+                    <!-- Requisito 4C: Mostrar la etiqueta y el color de fondo Corregir: 16.53. Podéis usar https://getbootstrap.com/docs/5.0/components/badge/ -->
+
+
+
                     <p class="text-center">RGB(<%= a.color %>)</p>
                     <div style="background-color:rgb(<%= a.color %>); height: 40px; width: 50px"
                         class="mx-auto mb-2 rounded-circle">
