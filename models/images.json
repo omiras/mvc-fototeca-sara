@@ -2,12 +2,15 @@
     {
         "title": "Andorra",
         "url": "https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I",
-        "date": "2022-07-13",
+        "date": "2022-07-06",
         "color": [
             109,
             173,
             218
         ],
-        "tag": "paisajes"
+        "tag": {
+            "name": "paisajes",
+            "color": "#817e1d"
+        }
     }
 ]

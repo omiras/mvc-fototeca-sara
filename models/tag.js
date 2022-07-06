@@ -21,9 +21,15 @@ const addNewTag = (name, color) => {
     fs.writeFileSync(rutaFichero, JSON.stringify(tags));
 };
 
+//Obtiene un tag a partir de su name
+const getTagByName = (name) => {
+    return DB.find(t => t.name == name);
+};
+
 module.exports = {
     getAllTags,
-    addNewTag
+    addNewTag,
+    getTagByName
 }
 
 

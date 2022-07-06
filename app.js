@@ -35,7 +35,10 @@ app.use('/tag', tagRoutes);
 // 4. Modificar model/image.js, para que la función addNewImage acepte un nuevo parámetro (tag). El objeto ahora debe contener también este tag
 // 5. El controlador ahora si podría crear una nueva imagen asociandole el tag del usuario
 
-// Corregir: 15:58.
+// REquisito 4 - C
+
+// 1. Modificar el controlador controllers/image.js para que inserte todo el objeto tag en la "base de datos". Debemos recuperar el tag identificado con el "name" que ha seleccionado el usuario y usarlo para crear la imagen
+// 2. En la vista views/index.ejs; añadir un nuevo elemento de itnerfaz de usuario para mostrar la etiqueta con su color
 
 
 app.get('/', (req, res) => {

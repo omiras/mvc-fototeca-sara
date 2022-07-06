@@ -37,7 +37,8 @@ const getForm = (req, res) => {
 
 const postForm = async (req, res) => {
     //añadir una constante que se quede con las propiedades del formulario , const{title,url,date} = req.body ,propiedad body hace ref a la inf, payload que viaja en el cuerpo de las peticiones post
-    const { title, url, date, tag } = req.body;
+    const { title, url, date } = req.body;
+    const tagName = req.body.tag;
 
     const dominantColor = await getColorFromURL(url);
 
@@ -61,8 +62,9 @@ const postForm = async (req, res) => {
 
     }
     else {
+        // Obtener todo el objeto tag (nombre y color )
+        const tag = modelTag.getTagByName(tagName);
         modelImages.addNewPicture(title, url, date, dominantColor, tag);
-
     }
 
 
