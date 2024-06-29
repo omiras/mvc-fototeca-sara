@@ -1,14 +1,1 @@
-[
-    {
-        "name": "animales",
-        "color": "#a83e3e"
-    },
-    {
-        "name": "paisajes",
-        "color": "#817e1d"
-    },
-    {
-        "name": "Coches",
-        "color": "#ae2424"
-    }
-]
+[{"name":"animales","color":"#a83e3e"},{"name":"paisajes","color":"#817e1d"},{"name":"Coches","color":"#ae2424"},{"name":"Eva","color":"#411515"}]

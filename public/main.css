@@ -1,33 +1,22 @@
-.body-form, .body-index, .body-about {
+.body-form,
+.body-index,
+.body-about {
     background-image: url("fondo.png");
-
     background-repeat: no-repeat;
     background-size: cover;
 
-   
-    
 }
 
-body{
+body {
     height: 100vh;
 }
 
 
 
-.nav-item a:hover{
-    background-color: pink; 
-}
-.navbar-toggler:hover{
-    background-color: pink; 
+.nav-item a:hover {
+    background-color: pink;
 }
 
-
-/* .card{
-    transition: 0.2s;
-    object-fit: cover;
-    padding: 5px;
+.navbar-toggler:hover {
+    background-color: pink;
 }
-.card:hover{
-    transform: scale(1.1);
-}
- */
