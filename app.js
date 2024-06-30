@@ -54,7 +54,7 @@ app.get("/about", (req, res) => {
 
 
 //parametro adicional de callback, esta funcion se ejecuta si todo ha ido bien
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server funciona");
 });
 
